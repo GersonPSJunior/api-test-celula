@@ -17,4 +17,23 @@ public class MockObject {
                 "}" +
                 "}";
     }
+    
+    public static String getMembro(){
+        return "{" +
+                "\"nome\" : \"wlsdsdd\"," +
+                "\"nascimento\" : \"12/04/1999\"," +
+                "\"cpf\" : \"563.802.820-09\"," +
+                "\"email\" : \"teste@teste.com\"," +
+                "\"senha\" : \"teste123\"," +
+                "\"telefone1\" : \"7323617273\"," +
+                "\"endereco\" : {" +
+                "\"rua\" : \"Rua fulano\"," +
+                "\"numero\" : \"123\"," +
+                "\"cep\" : \"872163871268\"," +
+                "\"cidade\" : 2" +
+                "}," +
+                "\"ativo\" : true," +
+                "\"batizado\" : true" +
+                "}";
+    }
 }

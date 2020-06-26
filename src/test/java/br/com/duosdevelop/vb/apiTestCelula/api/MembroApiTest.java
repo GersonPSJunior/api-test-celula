@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static br.com.duosdevelop.vb.apiTestCelula.constant.ApplicationConstant.*;
 
-public class CelulasApiTest {
+public class MembroApiTest {
 
     private String accessToken;
 
@@ -19,42 +19,55 @@ public class CelulasApiTest {
     }
 
     @Test
-    public void celulasPostTest(){
+    public void membrosPostTest(){
         RestAssured.given()
                 .header(AUTHORIZATION, BEARER +accessToken)
                 .contentType(ContentType.JSON)
-                .body(MockObject.getCelula())
+                .body(MockObject.getMembro())
                 .when()
-                .post(BASE_URI+"/celulas")
+                .post(BASE_URI+"/membros")
                 .then()
                 .statusCode(201);
     }
 
     @Test
-    public void celulasGetTest(){
+    public void membrosGetTest(){
         RestAssured.given()
+                .header(AUTHORIZATION, BEARER +accessToken)
                 .when()
-                .get(BASE_URI+"/celulas")
+                .get(BASE_URI+"/membros")
                 .then()
                 .statusCode(200);
     }
 
     @Test
-    public void celulasGetIdTest(){
+    public void membrosGetAtivoBatizadoTest(){
         RestAssured.given()
                 .header(AUTHORIZATION, BEARER +accessToken)
+                .param("ativo", "sim")
+                .param("batizado", "sim")
                 .when()
-                .get(BASE_URI+"/celulas/1")
+                .get(BASE_URI+"/membros")
                 .then()
                 .statusCode(200);
     }
 
     @Test
-    public void celulasGetIdNotFoundTest(){
+    public void membrosGetIdTest(){
         RestAssured.given()
                 .header(AUTHORIZATION, BEARER +accessToken)
                 .when()
-                .get(BASE_URI+"/celulas/-1")
+                .get(BASE_URI+"/membros/1")
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    public void membrosGetIdNotFoundTest(){
+        RestAssured.given()
+                .header(AUTHORIZATION, BEARER +accessToken)
+                .when()
+                .get(BASE_URI+"/membros/-1")
                 .then()
                 .statusCode(404);
     }
