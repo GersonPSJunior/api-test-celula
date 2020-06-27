@@ -18,7 +18,6 @@ public class MembroApiTest {
         accessToken = AuthenticationTest.getAccessToken();
     }
 
-    @Test
     public void membrosPostTest(){
         RestAssured.given()
                 .header(AUTHORIZATION, BEARER +accessToken)
