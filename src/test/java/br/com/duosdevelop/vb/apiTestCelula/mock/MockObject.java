@@ -30,7 +30,7 @@ public class MockObject {
                 "\"rua\" : \"Rua fulano\"," +
                 "\"numero\" : \"123\"," +
                 "\"cep\" : \"872163871268\"," +
-                "\"cidade\" : 2" +
+                "\"cidade\" : 1" +
                 "}," +
                 "\"ativo\" : true," +
                 "\"batizado\" : true" +

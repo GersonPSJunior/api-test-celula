@@ -15,8 +15,8 @@ public class AuthenticationTest {
                 .header("Content-Type", "application/x-www-form-urlencoded")
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("client", "m0b1l3@")
-                .formParam("username", "maria@gmail.com")
-                .formParam("password", "maria")
+                .formParam("username", "admin@gmail.com")
+                .formParam("password", "admin")
                 .formParam("grant_type", "password")
                 .when()
                 .post(BASE_URI + "/oauth/token");
