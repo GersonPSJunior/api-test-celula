@@ -7,7 +7,9 @@
     <groupId>br.com.duosdevelop.vb</groupId>
     <artifactId>api-test-celula</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -26,6 +28,5 @@
             <artifactId>json</artifactId>
             <version>20180813</version>
         </dependency>
-
     </dependencies>
 </project>
